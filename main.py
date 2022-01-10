@@ -6,6 +6,7 @@
 # Twitter: @CoderAgam001
 # Linkdin: Agamdeep Singh
 
+# Random Moduel to get the words randomly
 import random
 
 # The Python files for the ASCII arts, the Hangman Logo and the words
