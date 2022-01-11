@@ -20,24 +20,33 @@ def Welcome():
     
 def Rules():
     # Give the player a choice to get to know How To Play
-    choice = input("\nDo you want to know the How To Play? Type (y/n): ").lower()
+    choice = input("\nDo you want to know the How To Play? Type (yes/no): ").lower()
     
-    # The list of How To Play
-    how_to_play = '''
+    # Conditions to skip/toggle How To Play
+    if choice == 'yes':
+        print('''
+    *How TO PLAY:*\n
     - Hangman is game where you've a Word and you have to guess it letter by letter.
     - You have 6 Lives to guess the word.
     - When you make a wrong guess, you lose 1 life.
     - If you lose all lives, you Lose.
     - If you guess the word before losing all 6 lives, you Win.
-    '''
+    ''')
 
-    # Conditions to skip/toggle How To Play
-    if choice == 'y':
-        how_to_play
-    
+        start = input("Do you want to start? (yes/no): ").lower()
+
+        if start == 'yes':
+            Main()
+        else:
+            print("Thanks for using Hangman!")
+
     else:
-        print("\nI have a word, can you guess it?")
-        Main()
+        start = input("Do you want to start now? (yes/no): ").lower()
+
+        if start == 'yes':
+            Main()
+        else:
+            print("Thanks for using Hangman!")
 
 # The main code of the game
 def Main():
@@ -58,6 +67,7 @@ def Main():
 
     # Give the user a hint
     hint = random.choice(chosen_word).upper()
+    print("\nI have a word, can you guess it?")
     print(f"\nHint is: {hint}")
 
     # This while loops through the guess input unit the game gets over, either by winning or losing
@@ -98,4 +108,3 @@ def Main():
         print(hangman_arts.stages[lives])
 
 Welcome()
-Main()
