@@ -20,7 +20,7 @@ def Welcome():
     
 def Rules():
     # Give the player a choice to get to know How To Play
-    choice = input("\nDo you want to know the How To Play? Type (yes/no): ").lower()
+    choice = input("\nDo you want to know How To Play? Type (yes/no): ").lower()
     
     # Conditions to skip/toggle How To Play
     if choice == 'yes':
@@ -33,6 +33,7 @@ def Rules():
     - If you guess the word before losing all 6 lives, you Win.
     ''')
 
+        # Give the user a choice to start the game
         start = input("Do you want to start? (yes/no): ").lower()
 
         if start == 'yes':
@@ -41,12 +42,7 @@ def Rules():
             print("Thanks for using Hangman!")
 
     else:
-        start = input("Do you want to start? (yes/no): ").lower()
-
-        if start == 'yes':
-            Main()
-        else:
-            print("Thanks for using Hangman!")
+        Main()
 
 # The main code of the game
 def Main():
