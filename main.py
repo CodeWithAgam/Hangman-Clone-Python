@@ -47,7 +47,7 @@ def Rules():
 
 # The main code of the game
 def Main():
-    
+    categories_list = animals, languages
 
     print('''
     Categories of words available:
@@ -62,8 +62,8 @@ def Main():
 
     categoary = int(input("Choose your Category: "))
     
-    # Select a random word
-    chosen_word = random.choice(categories_list[categoary])
+    # Select a random word from the categoary selected from the categories list
+    chosen_word = categories_list[categoary - 1][random.randint(0, len(categories_list))]
 
     # Get the length of the random word
     word_length = len(chosen_word)
