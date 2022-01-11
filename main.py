@@ -11,7 +11,7 @@ import random
 
 # The Python files for the ASCII arts, the Hangman Logo and the words
 import assets.hangman_arts as hangman_arts
-from assets.hangman_words import word_list as words
+from assets.hangman_words import *
 
 # Welcome message for the user
 def Welcome():
@@ -44,10 +44,26 @@ def Rules():
     else:
         Main()
 
+
 # The main code of the game
 def Main():
+    categories_list = [animals, languages]
+
+    print('''
+    Categories of words available:
+
+    1. Animals
+    2. Languages
+    3. Cars Names
+    4. Bike Names
+    5. Company Names
+    6. Programming Languages
+    ''')
+
+    categoary = int(input("Choose your Category: "))
+    
     # Select a random word
-    chosen_word = random.choice(words)
+    chosen_word = random.choice(categories_list[categoary])
 
     # Get the length of the random word
     word_length = len(chosen_word)
