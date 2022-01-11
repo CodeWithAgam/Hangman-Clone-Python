@@ -41,7 +41,7 @@ def Rules():
             print("Thanks for using Hangman!")
 
     else:
-        start = input("Do you want to start now? (yes/no): ").lower()
+        start = input("Do you want to start? (yes/no): ").lower()
 
         if start == 'yes':
             Main()
