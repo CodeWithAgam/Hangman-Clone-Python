@@ -47,7 +47,7 @@ def Rules():
 
 # The main code of the game
 def Main():
-    categories_list = [animals, languages]
+    
 
     print('''
     Categories of words available:
