@@ -57,7 +57,7 @@ def Main():
     3. Cars Names
     4. Bike Names
     5. Company Names
-    6. Programming Languages
+    6. Programming Languages and Frameworks
     ''')
 
     categoary = int(input("Choose your Category: "))
