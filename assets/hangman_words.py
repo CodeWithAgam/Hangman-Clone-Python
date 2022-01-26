@@ -50,6 +50,11 @@ animals = [
     'eagle',
     'earthworm',
     'falcon',
+    'fly',
+    'firefly',
+    'fox',
+    'frog',
+    'frogfish',
 ]
 
 languages = [
