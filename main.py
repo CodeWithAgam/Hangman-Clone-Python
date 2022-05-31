@@ -1,8 +1,7 @@
-# Hangman Game Clone built in Python
 # Created by Agamdeep Singh / CodeWithAgam
 # Youtube: CodeWithAgam
 # Github: CodeWithAgam
-# Instagram: @agamdeep_21, @coderagam001
+# Instagram: @coderagam001 / @codewithagam
 # Twitter: @CoderAgam001
 # Linkdin: Agamdeep Singh
 
@@ -107,6 +106,15 @@ def Main():
             print(f"You guessed {guess}, that's not in the word. You Lose 1 Life.")
             lives -= 1
 
+            hint_needed = input("Do you want a Hint? Type (yes/no): ")
+            
+            if hint_needed == 'yes':
+                hint = random.choice(chosen_word).upper()
+                print(f"\nHint is: {hint}")
+            
+            else:
+                print("Let's Continue!")
+
             if lives == 0:
                 end_of_game = True
                 print("You lose.")
@@ -119,6 +127,14 @@ def Main():
         if "_" not in display:
             end_of_game = True
             print("You win.")
+
+        run_again = input("\nDo you want to play again? (yes/no): ")
+
+        while True:
+            if run_again == "yes":
+                Main()
+            else:
+                print("Thanks for playing!")
 
         # Print the current stage corresponding to the no. of lives left and wrong words guessed
         print(hangman_arts.stages[lives])
