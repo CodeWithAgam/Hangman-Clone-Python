@@ -28,7 +28,7 @@ Check the Flowchart included in the files for additional information (also menti
 
 Also check all the comments in the code to get an idea of what's happening.
 
-
+## License:
 
 ### This project is licensed under the Apache License, Version 2.0. 
 ### You're open to make changes and contribute to the project, please make a pull request!
